@@ -1,3 +1,101 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* 🌸 SaiAi Custom Styles */
+
+:root {
+  --card-gradient: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+[saved-theme="dark"] {
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* 🧱 Card Grid Layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--secondary);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--card-gradient);
+  opacity: 0.8;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card a::after {
+  display: none; /* remove default link underline */
+}
+
+/* ❄️ Glassmorphism Sidebar */
+.left, .right {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 🖼️ Hero Section Styling */
+h1 {
+  background: var(--card-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 800;
+}
+
+blockquote {
+  border-left: 4px solid var(--tertiary) !important;
+  background: var(--highlight);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ✨ Callout Customizations */
+.callout[data-callout="reflection"] {
+  --color: var(--secondary);
+  --border: var(--secondary);
+  --bg: var(--highlight);
+}
+
+.callout[data-callout="idea"] {
+  --color: var(--tertiary);
+  --border: var(--tertiary);
+  --bg: rgba(245, 158, 11, 0.1);
+}
