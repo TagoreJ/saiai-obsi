@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "SaiAi Notes",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -16,39 +16,39 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "saiai-obsi.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Outfit",
+        body: "Inter",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#FFF8F0", // Soft Cream
+          lightgray: "#E5E7EB",
+          gray: "#9CA3AF",
+          darkgray: "#4B5563",
+          dark: "#1F2937",
+          secondary: "#7C3AED", // Vibrant Violet
+          tertiary: "#F59E0B", // Amber/Gold
+          highlight: "rgba(124, 58, 237, 0.15)", // Violet highlight
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#0F172A", // Rich Slate
+          lightgray: "#1E293B",
+          gray: "#64748B",
+          darkgray: "#CBD5E1",
+          dark: "#F8FAFC",
+          secondary: "#A78BFA", // Soft Violet
+          tertiary: "#FBBF24", // Gold
+          highlight: "rgba(167, 139, 250, 0.15)",
+          textHighlight: "#FDE68A", // Soft Gold
         },
       },
     },
